@@ -35,7 +35,7 @@ status:
   .byte $00
   
 raster_final:
-  .byte 255
+  .byte 200
   
 raster0_str:
   .asciiz "raster0: "
@@ -147,6 +147,7 @@ status1:
   LDA raster0	; Rasterzeile für neuen Status einstellen
   STA VIC_RASTER
 finally:  
-  
+  INC BACK
+  DEC BACK
 exit_irq:
   JMP $EA7E	; zurück in den Kernel
