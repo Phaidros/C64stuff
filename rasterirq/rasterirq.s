@@ -44,6 +44,14 @@ raster0_str:
 raster1_str:
   .asciiz "raster1: "
   .byte 0 
+
+color0_str:
+  .asciiz "color0 : "
+  .byte 0
+
+color1_str:
+  .asciiz "color1 : "
+  .byte 0
   
 cr_str:
   .byte $0D, $00
@@ -76,6 +84,12 @@ cr_str:
   print cr_str
   print raster1_str
   print_int raster1
+  print cr_str
+  print color0_str
+  print_int color0
+  print cr_str
+  print color1_str
+  print_int color1
   print cr_str
 
 begin_loop:
